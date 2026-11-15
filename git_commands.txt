@@ -1,0 +1,46 @@
+GIT COMMANDS USED IN THIS ASSIGNMENT
+====================================
+
+SETUP
+git init -b main
+    Creates a new empty Git repository in the folder with 'main' as the default branch.
+git status
+    Shows changed, staged and untracked files (used to verify .gitignore works).
+
+COMMITTING
+git add <file>   /   git add .gitignore
+    Stages the named file(s) so they are included in the next commit.
+git commit -m "message"
+    Saves the staged changes as a new commit with a descriptive message.
+
+BRANCHING AND MERGING
+git branch feature
+    Creates a new branch named 'feature' from the current commit.
+git switch feature
+    Switches the working directory to the 'feature' branch.
+git switch main
+    Switches back to the 'main' branch.
+git merge --no-ff feature -m "Merge branch 'feature' into main"
+    Merges 'feature' into 'main'; --no-ff forces a merge commit so branch activity stays visible in history.
+
+HISTORY
+git log --oneline -3
+    Shows the last 3 commits in short form.
+git log --oneline --graph --decorate --all
+    Displays full commit history as a graph, including branches and merges.
+git ls-files
+    Lists all files tracked by Git (shows ignored files are not tracked).
+
+UNDO
+git revert HEAD --no-edit
+    Undoes the last commit by creating a new commit that reverses its changes; safe for shared history.
+
+GITHUB INTEGRATION (after creating an EMPTY public repo on github.com)
+git remote add origin https://github.com/<username>/<repo>.git
+    Connects the local repository to the remote GitHub repository named 'origin'.
+git remote -v
+    Verifies the remote URL.
+git push -u origin main
+    Pushes the main branch to GitHub and sets it as the upstream branch.
+git push origin feature
+    Pushes the feature branch to GitHub so branch history is visible there.
