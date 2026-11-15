@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  line-height: 1.5;
+}
+header { border-bottom: 2px solid #6f4e37; margin-bottom: 20px; }
+h1 { color: #6f4e37; }
+nav a { color: #6f4e37; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
